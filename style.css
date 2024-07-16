@@ -5,50 +5,49 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f7f7f7;
 }
 
 main {
-    max-width: 50rem; /* equivalente a 800px */    
-    margin: 10rem auto;
-    padding: 1.25rem; /* equivalente a 20px */
+    max-width: 50rem; 
+    margin: 2rem auto;
+    padding: 1.5rem; 
     background-color: #ffffff;
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* equivalente a 10px */
-    border-radius: 0.5rem; /* equivalente a 8px */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); 
+    border-radius: 1rem; 
 }
 
 h1 {
     text-align: center;
     color: #333;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 1.25rem; /* equivalente a 20px */
+    margin-bottom: 1.5rem; 
 }
 
 h2 {
     text-align: center;
     color: #555;
-    margin-top: 2.5rem; /* equivalente a 40px */
-    margin-bottom: 1.25rem; /* equivalente a 20px */
+    margin-top: 3rem; 
+    margin-bottom: 1.5rem; 
 }
 
-/* Seção de Explicação do IMC */
 .container__imc--explica {
-    margin-bottom: 1.25rem; /* equivalente a 20px */
+    margin-bottom: 1.5rem; 
 }
 
 .container__imc--explica p {
     color: #666;
     line-height: 1.6;
-    margin-bottom: 0.625rem; /* equivalente a 10px */
+    margin-bottom: 1rem; 
 }
 
-/* Contêiner da Calculadora de IMC */
+
 .container__calculadora--imc {
     display: flex;
     flex-direction: column;
-    gap: 0.625rem; /* equivalente a 10px */
-    margin-bottom: 1.25rem; /* equivalente a 20px */
+    gap: 1rem; 
+    margin-bottom: 1.5rem; 
 }
 
 .container__calculadora--imc label {
@@ -57,21 +56,22 @@ h2 {
 }
 
 .container__calculadora--imc input {
-    padding: 0.625rem; /* equivalente a 10px */
+    padding: 0.75rem; 
     border: 1px solid #ccc;
-    border-radius: 0.25rem; /* equivalente a 4px */
-    font-size: 1rem; /* equivalente a 16px */
-    width: calc(100% - 1.375rem); /* equivalente a 22px */
+    border-radius: 0.5rem; 
+    font-size: 1rem; 
+    width: calc(100% - 1.5rem); 
 }
 
 /* Botões */
 .button {
-    padding: 0.625rem 1.25rem; /* equivalente a 10px 20px */
+    padding: 0.75rem 1.5rem; 
     border: none;
-    border-radius: 0.25rem; /* equivalente a 4px */
-    font-size: 1rem; /* equivalente a 16px */
+    border-radius: 0.5rem; 
+    font-size: 1rem; 
     cursor: pointer;
-    margin-right: 0.625rem; /* equivalente a 10px */
+    margin-right: 0.75rem; 
+    transition: background-color 0.3s ease;
 }
 
 .button__calcular {
@@ -86,38 +86,38 @@ h2 {
 
 .button__calcular:hover,
 .button__limpar:hover {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
-/* Tabela de Interpretação do IMC */
 .container__tabela--imc {
-    margin-top: 1.25rem; /* equivalente a 20px */
+    margin-top: 1.5rem; 
 }
 
 .tabela__imc {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1.25rem; /* equivalente a 20px */
+    margin-bottom: 1.5rem; 
 }
 
 .tabela__imc th, .tabela__imc td {
     border: 1px solid #ccc;
-    padding: 0.625rem; /* equivalente a 10px */
+    padding: 0.75rem; 
     text-align: center;
 }
 
 .tabela__imc th {
     background-color: #f2f2f2;
+    color: #333;
 }
 
 .tabela__imc tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* IMC Final */
+
 .imc__final {
     text-align: center;
     color: #333;
-    font-size: 1.125rem; /* equivalente a 18px */
-    margin-top: 1.25rem; /* equivalente a 20px */
+    font-size: 1.125rem; 
+    margin-top: 1.5rem; 
 }
