@@ -4,27 +4,37 @@ const txtAreaPeso = document.getElementById('peso');
 const txtAreaAltura = document.getElementById('altura');
 const areaImc = document.getElementById('imc__final')
 
-btnCalcula.addEventListener('click', () => {
-    const peso = txtAreaPeso.value;
-    const altura = txtAreaAltura.value;
+btnCalcula.addEventListener('click', handleCalculaImc)
+btnLimpa.addEventListener('click',handleLimpa)
 
-    const imc = calculaImc(altura,peso).toFixed(2)
+function handleLimpa() {
+    mostraNaTela()
+    limpaTxtArea('')
+}
+
+function handleCalculaImc() {
+    const peso = parseFloat(txtAreaPeso.value);
+    const altura = parseFloat(txtAreaAltura.value);
     
     try {
+        const imc = calculaImc(altura,peso).toFixed(2)
         validacaoAlturaePeso(altura, peso);
-        areaImc.innerHTML = `Seu IMC é de: ${imc}`
+        mostraNaTela(imc)
     } catch (error) {
         alert(error.message);
+        limpaTxtArea()
     }
-})
+}
 
-btnLimpa.addEventListener('click',() => {
-    areaImc.innerHTML = `Seu IMC é de:`
+function mostraNaTela(imc) {
+    areaImc.innerHTML = `Seu IMC é de: ${imc}`
+}
+
+function limpaTxtArea() {
     txtAreaAltura.value = ''
     txtAreaPeso.value = ''
-
-})
-
+    mostraNaTela('')
+}
 
 function validacaoAlturaePeso(altura,peso) {
     if (!altura || !peso || isNaN(altura) || isNaN(peso) || peso < 0 || altura < 0) {
